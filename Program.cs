@@ -13,18 +13,20 @@ namespace MyFirstConsoleApplication
             var name = "Josué Benjamín Centurión";
             var location = "Resistencia, Arg. ";
             var Christmas = new DateTime(2023, 12, 23);
-            var currentDate = DateTime.Now;
+            var currentDate = DateTime.Now.Date;
             var daysUntilChristmas = Christmas - currentDate;
 
-            Console.WriteLine("My name is " + name + ", I'm from " + 
+            Console.WriteLine("My name is " + name + ", I'm from " +
                 location);
-            Console.WriteLine(daysUntilChristmas.Days + 
+            Console.WriteLine("\nThe current date is: " + currentDate.ToString("yyyy/MM/dd"));
+
+            Console.WriteLine("\n" + daysUntilChristmas.Days +
                 " days left until Christmas ");
 
             double width, height, woodLength, glassArea;
             string widthString, heightString;
 
-            Console.WriteLine("Write the width of the Window: ");
+            Console.WriteLine("\nWrite the width of the Window: ");
             widthString = Console.ReadLine();
             width = double.Parse(widthString);
 
